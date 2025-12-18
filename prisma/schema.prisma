@@ -20,8 +20,8 @@ model Task {
   title       String
   description String?
   dueDate     DateTime?
-  priority    Priority
-  status      Status
+  priority    Priority?
+  status      Status?
   userId      String
   user        User        @relation(fields: [userId], references: [id])
   categories  Category[]  @relation("TaskCategories")
