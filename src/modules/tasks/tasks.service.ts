@@ -18,9 +18,9 @@ export class TasksService {
         priority: dto.priority,
         status: dto.status,
         userId,
-        categories: dto.categoryIds
+        categories: dto.categories
           ? {
-              connect: dto.categoryIds.map(id => ({ id })),
+              connect: dto.categories.map(id => ({ id })),
             }
           : undefined,
       },
@@ -65,9 +65,9 @@ export class TasksService {
       data: {
         ...dto,
         dueDate: dto.dueDate ? new Date(dto.dueDate) : undefined,
-        categories: dto.categoryIds
+        categories: dto.categories
           ? {
-              set: dto.categoryIds.map(id => ({ id })),
+              set: dto.categories.map(id => ({ id })),
             }
           : undefined,
       },

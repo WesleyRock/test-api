@@ -22,5 +22,5 @@ export class CreateTaskDto {
   status?: Status;
 
   @IsOptional()
-  categoryIds?: string[];
+  categories?: string[];
 }
